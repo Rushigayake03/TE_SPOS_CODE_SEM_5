@@ -116,6 +116,7 @@ public class SimpleScheduling {
             }
             highest.remainingTime = 0;
             time += highest.burstTime;
+
             highest.turnaroundTime = time - highest.arrivalTime;
             highest.waitingTime = highest.turnaroundTime - highest.burstTime;
             completed++;
