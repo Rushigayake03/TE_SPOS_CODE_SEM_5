@@ -28,7 +28,7 @@ public class SimpleScheduling {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number of processes: ");
+        System.out.println("Enter number of processes: ");
         int n = sc.nextInt();
 
         List<Process> processes = new ArrayList<>();
