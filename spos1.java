@@ -6,7 +6,7 @@
 
 import java.util.*;
 
-class OnePassAssembler {
+class spos1 {
     static Map<String, Integer> symbolTable = new HashMap<>();
     static Map<String, String> opcodeTable = new HashMap<>();
     
