@@ -1,6 +1,15 @@
+// 2.Design suitable Data structures and implement Pass-II of a two-
+// pass assembler for pseudo-machine. Implementation should consist
+// of a few instructionuctions from each category and few assembler
+// directives. The output of Pass-I (intermediate code file and symbol
+// table) should be input for Pass-II.
+
+
+
+
 import java.util.*;
 
-class spos2 {
+class TwoPassAssembler {
     static Map<String, Integer> symbolTable = new HashMap<>();
     static Map<String, String> opcodeTable = new HashMap<>();
 
@@ -22,8 +31,8 @@ class spos2 {
                 break;
             }
             String[] parts = line.split("\\s+");
-            String instr = parts[0];
-            switch (instr) {
+            String instruction = parts[0];
+            switch (instruction) {
                 case "START":
                     System.out.println("Initialization at " + parts[1]);
                     break;
@@ -47,7 +56,7 @@ class spos2 {
                 case "DIV":
                     String reg1 = parts[1].replace(",", "");
                     String reg2 = parts[2];
-                    System.out.println(opcodeTable.get(instr) + " " + reg1 + " " + reg2);
+                    System.out.println(opcodeTable.get(instruction) + " " + reg1 + " " + reg2);
                     break;
                 case "MOVEM":
                     reg = parts[1].replace(",", "");
@@ -65,7 +74,7 @@ class spos2 {
                     System.out.println(opcodeTable.get("CDS") + " 1");
                     break;
                 default:
-                    System.out.println("Unknown instruction: " + instr);
+                    System.out.println("Unknown instructionuction: " + instruction);
             }
         }
         sc.close();
