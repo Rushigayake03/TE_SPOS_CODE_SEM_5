@@ -50,9 +50,14 @@ class spos1 {
                     break;
 
                 case "MOVEREG":
-                    String reg = parts[1].replace(",", "");
-                    String val = parts[2].replace("'", "").replace(",", "");
-                    System.out.println("MOVEREG " + reg + ", " + val);
+                    if (parts.length == 2) {
+                        String val = parts[1].replace("'", "");
+                        System.out.println("MOVEREG " + val);
+                    } else {
+                        String reg = parts[1].replace(",", "");
+                        String val = parts[2].replace("'", "").replace(",", "");
+                        System.out.println("MOVEREG " + reg + ", " + val);
+                    }
                     break;
 
                 case "ADD":
@@ -64,7 +69,7 @@ class spos1 {
                     break;
 
                 case "MOVEM":
-                    reg = parts[1].replace(",", "");
+                    String reg = parts[1].replace(",", "");
                     String regTarget = parts[2];
                     System.out.println("MOVEM " + reg + ", " + regTarget);
                     break;
