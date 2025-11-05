@@ -81,6 +81,7 @@ public class SimpleScheduling {
                 }
             }
             if (shortest == null) {
+
                 time++;
                 continue;
             }
@@ -111,11 +112,21 @@ public class SimpleScheduling {
                 }
             }
             if (highest == null) {
+                
+                boolean allDone = true;
+                for (Process p : processes) {
+                    if (p.remainingTime > 0) {
+                        allDone = false;
+                        break;
+                    }
+                }
+                if (allDone) break; 
+
                 time++;
                 continue;
             }
             
-            highest.waitingTime = highest.turnaroundTime - highest.burstTime;
+            highest.waitingTime = time - highest.arrivalTime;
 
             time += highest.burstTime;
             highest.turnaroundTime = time - highest.arrivalTime;
