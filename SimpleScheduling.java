@@ -1,4 +1,4 @@
-// 5.Write a program to simulate CPU Scheduling Algorithms: FCFS
+// 5.Write a program to simulate CPU Scheduling Algorithms: FCFS(Non preemptive)
 // 6.Write a program to simulate CPU Scheduling Algorithms: SJF (Preemptive)
 // 7.Write a program to simulate CPU Scheduling Algorithms:  Priority (Non-Preemptive)
 
