@@ -114,11 +114,13 @@ public class SimpleScheduling {
                 time++;
                 continue;
             }
-            highest.remainingTime = 0;
-            time += highest.burstTime;
-
-            highest.turnaroundTime = time - highest.arrivalTime;
+            
             highest.waitingTime = highest.turnaroundTime - highest.burstTime;
+
+            time += highest.burstTime;
+            highest.turnaroundTime = time - highest.arrivalTime;
+            
+            highest.remainingTime = 0;
             completed++;
         }
         for (Process p : processes) {
