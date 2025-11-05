@@ -1,3 +1,9 @@
+//  3.Design suitable data structures and implement Pass-I of a two-
+// pass macro-processor. The output of Pass-I (MN T, MDT and
+// intermediate code file without any macro definitions)
+// should be input for Pass-II.
+
+
 import java.util.*;
 
 class spmacro1 {
